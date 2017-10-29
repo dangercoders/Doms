@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!-- 
+               ,----------------,              ,---------,
+        ,-----------------------,          ,"        ,"|
+      ,"                      ,"|        ,"        ,"  |
+     +-----------------------+  |      ,"        ,"    |
+     |  .-----------------.  |  |     +---------+      |
+     |  |                 |  |  |     | -==----'|      |
+     |  |  I HATE CODE!   |  |  |     |         |      |
+     |  |  Bad command or |  |  |/----|`---=    |      |
+     |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
+     |  |                 |  |  |  // |(((( [33]|    ,"
+     |  `-----------------'  |," .;'| |((((     |  ,"
+     +-----------------------+  ;;  | |         |,"
+        /_)______________(_/  //'   | +---------+
+   ___________________________/___  `,
+  /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+ / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+/_==__==========__==_ooo__ooo=_/'   /___________,"
+`-----------------------------'
+Created By: Amulya Kumar Sahoo, http://facebook.com/amulya349
+                      and
+            Ashish Kumar Badtiya, http://facebook.com/itsashis4u
+ -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Diwali Greetings from IIITians !</title>
+    <link href='http://fonts.googleapis.com/css?family=Coustard:400,900' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <style>
+    body {
+    background-color: #000000;
+    margin: 0;
+    }
+    #canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    }
+  a{
+    text-decoration: none;
+    color: red;
+  }
+  a:hover{
+    text-decoration: underline;
+    font-size: 1.1em;
+  }
+    </style>
+    
+    <script>
+    window.open    = function(){};
+    window.print   = function(){};
+    // Support hover state for mobile.
+    if (false) {
+    window.ontouchstart = function(){};
+    }
+    </script>
+  </head>
+  <body>
+    
+    <canvas id="canvas"></canvas>
+    <div style="background:url(pic3.jpg) repeat-x;position:absolute;left:0;bottom:0;width:100%;height:200px; z-index: -1"></div>
+    <p style="position:fixed; bottom:0; right:0; color:white; font-family:Coustard;margin:10px"> Made with Love --> <a href="https://facebook.com/amulya349" target="_blank">Amulya</a> and <a href="https://facebook.com/itsashis4u" target="_blank">Ashish</a></p>
+    <script type="text/paperscript" canvas="canvas">
+
+    var browserWidth = 0.5* document.documentElement.clientWidth;
+    //alert(browserWidth);
+    var text = new PointText(new Point(browserWidth, 120));
+    text.justification = 'center';
+    text.fillColor = 'red';
+    text.content = 'Happy and Safe Diwali';
+    text.fontSize = 60;
+    text.fontFamily = "Coustard";
+    
+    // Params
+    var param1var = getQueryVariable("name");
+      var wish;
+      function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) {
+          console.log(pair[1]);
+          wish = decodeURIComponent(pair[1].split('+').join('%20')); }
+        else if(pair[1]=""){wish = "To You !"}
+        else{wish = "To You !"}
+        } 
+        console.log('Query Variable ' + variable + ' not found');
+      }
+
+    var t = new PointText(new Point(browserWidth, 220));
+    t.justification = 'center';
+    t.fillColor = 'white';
+    t.content = wish;
+    t.fontSize = 50;
+    t.fontFamily = "Coustard";
+
+    function Hex(position, targetRadius, color) {
+    var subs = 3;
+    this.radius = targetRadius;
+    this.sides = randomIndex([30]);
+    this.targetHex = new Path.RegularPolygon(position, this.sides, targetRadius);
+    this.paths = [];
+    for (var i = 0; i < subs; i++) {
+    var h = new Path.RegularPolygon(position, this.sides, 0);
+    if (i === 0) {
+    h.strokeColor = color;
+    }
+    else {
+    h.strokeColor = new Color({
+    hue:color.hue,
+    saturation:color.saturation,
+    lightness:randomRange(0.4, 0.6),
+    alpha:1
+    });
+    }
+    h.strokeWidth = 24;
+    h.shadowBlur = 64;
+    h.shadowColor = h.strokeColor;
+    this.paths.push(h);
+    }
+    this.color = this.paths[subs - 1].strokeColor;
+    this.speed = 125;
+    }
+    Hex.prototype = {
+    animate:function() {
+    var tl = new TimelineMax({
+    onComplete:function() {
+    this.paths.forEach(function(p) {
+    p.remove();
+    });
+    },
+    onCompleteScope:this
+    });
+    var duration = this.radius / this.speed,
+    offset = 0,
+    ease = Cubic.easeOut;
+    this.paths.forEach(function(h) {
+    var from, to;
+    for (var i = 0; i < h.segments.length; i++) {
+    from = h.segments[i].point;
+    to = this.targetHex.segments[i].point;
+    tl.to(from, duration, {x:to.x, y:to.y, ease:ease}, offset);
+    tl.to(h, duration, {strokeWidth:0, ease:ease}, offset);
+    }
+    offset += 0.2;
+    }, this);
+    return tl;
+    }
+    };
+    function Line(start, angle, length, color) {
+    this.start = start;
+    this.end = new Point();
+    this.end.setAngle(angle);
+    this.end.setLength(length);
+    this.end += this.start;
+    this.path = new Path();
+    this.path.add(this.start, this.end);
+    this.color = this.path.strokeColor = color;
+    this.path.visible = false;
+    this.path.strokeWidth = 2;
+    this.path.strokeCap = 'round';
+    this.path.shadowBlur = 32;
+    this.path.shadowColor = this.color;
+    this.speed = 250;
+    }
+    Line.prototype = {
+    animate:function() {
+    var tl = new TimelineMax({
+    onStart:function() {
+    this.path.visible = true;
+    },
+    onStartScope:this,
+    onComplete:function() {
+    this.path.remove();
+    },
+    onCompleteScope:this
+    });
+    var start = this.path.segments[0].point,
+    end = this.path.segments[1].point;
+    var duration = this.path.length / this.speed,
+    ease = Cubic;
+    tl.from(end, duration, {x:start.x, y:start.y, ease:ease.easeInOut});
+    tl.to(start, duration * 0.75, {x:end.x, y:end.y, ease:ease.easeOut}, '-=0.5');
+    return tl;
+    }
+    };
+    function createFirework() {
+    var tl = new TimelineMax();
+    var startPoint = new Point(view.size.width * Math.random(), view.size.height*0.8),
+    angle = randomRange(240,301),
+    length = view.size.height * 0.1*randomRange(4,6),
+    size = randomRange(64, 200),
+    color = getRandomColor();
+    var trail = new Line(startPoint, angle, length, color),
+    hex = new Hex(trail.end, size, color);
+    tl.add(trail.animate());
+    tl.add('trailDone');
+    tl.add(hex.animate(), 'trailDone');
+    for (var i = 0; i < hex.sides; i++) {
+    var point = hex.targetHex.segments[i].point,
+    localPoint = point - hex.targetHex.position;
+    var spark = new Line(trail.end, localPoint.angle, size * 2, color);
+    tl.add(spark.animate(), 'trailDone');
+    }
+    return tl;
+    }
+    //Update
+    function onFrame(e) {
+    if (e.count % 60 === 0) {
+    createFirework();
+    }
+    }
+    //Utils
+    function getRandomColor() {
+    return new Color({
+    hue:randomRange(0, 100),
+    saturation:0.75,
+    lightness:0.5
+    })
+    }
+    function randomIndex(arr) {
+    return arr[randomRange(0, arr.length, true)];
+    }
+    function randomRange(min, max, floor) {
+    var v = min + Math.random() * (max - min);
+    floor = floor || false;
+    return floor ? (v | 0) : v;
+    }
+    </script>
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.18/paper-full.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.1/TweenMax.min.js'></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-37707141-4', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+AuthName "test"
+AuthUserFile "/home/dayalbag/.htpasswds/public_html/tts/test/passwd"

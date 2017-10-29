@@ -1,0 +1,234 @@
+*{
+ margin:0px;
+ padding:0px;
+ }
+ h1{
+ font-size:15px;
+ }
+body{
+ font-family:Tahoma, Geneva, sans-serif;
+ background: #009688;
+ }
+#container{
+ width:550px;
+ background-color:#B2DFDB;
+ margin:auto;
+ margin-top:10px;
+ margin-bottom:10px;
+ box-shadow:0 0 3px #999;
+ }
+#container_body{
+ padding:20px;
+ }
+.form_title{
+ font-size:35px;
+ color:#141823;
+ text-align:center;
+ padding:10px;
+ font-weight:normal;
+ }
+.head_para{
+ font-size:19px;
+ color:#99a2a7;
+ text-align:center;
+ font-weight:normal;
+ }
+#form_name{
+ padding:25px 0 0 15px;
+ }
+.firstnameorlastname{
+  margin-right:20px;
+ }
+.input_name{
+ width:207px;
+ padding:5px;
+ font-size:18px;
+ }
+ #RollNO_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+ .RollNO{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ #CourseCode_form{
+ clear:both;
+ padding:20px 0 10px 0px;
+ }
+ .CourseCode{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ #CourseName_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+ .CourseName{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ #CourseMentor_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+ .CourseMentor{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ 
+ #Contact_no{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+ .input_ContactNo{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ #Year{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+ .input_Year{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+#email_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+.input_email{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ 
+  
+.dtpicker{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ 
+ #question_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+.input_question{
+ width:434px;
+ height:100px;
+ padding:5px;
+ font-size:18px;
+ } 
+ 
+#wrong_answer3_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+.input_wrong_answer3{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ } 
+ 
+ 
+#wrong_answer2_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+.input_wrong_answer2{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }   
+ 
+#wrong_answer1_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+.input_wrong_answer1{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ } 
+  
+#correct_answer_form{
+ clear:both;
+ padding:15px 0 10px 0px;
+ }
+.input_correct_answer{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ } 
+ 
+#Sex{
+ padding:10px 0 10px 0px;
+ }
+.input_Re_email{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+#password_form{
+ padding:10px 0 10px 0px;
+ }
+#Upload_image{
+ padding:10px 0 10px 0px;
+ }
+.input_password{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+ .input_bday{
+ width:434px;
+ padding:5px;
+ font-size:18px;
+ }
+.birthday_title{
+ font-size:16px;
+ color:#8b919d;
+ font-weight:normal;
+ padding:0 0 10px 0;
+ }
+select{
+ padding:8px;
+ width:434px;
+ }
+#birthday{
+ font-size:12px;
+ color:#8b919d;
+ padding-top:10px;
+ }
+#radio_button{
+ padding:10px 0 0 0;
+ }
+#sign_user{
+ font-size:14px;
+ color:#FFF;
+ text-align:center;
+ background-color:#3B5998;
+ padding:10px;
+ margin-top:10px;
+ cursor: pointer;
+ }
+#errorBox{
+ color:#F00;
+ }
+ #gallery .thumbnail{
+            width:150px;
+            height: 150px;
+            float:left;
+            margin:2px;
+        }
+#gallery .thumbnail img{
+            width:150px;
+            height: 150px;
+        }

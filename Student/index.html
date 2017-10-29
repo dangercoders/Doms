@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+     
+ <style>
+ dt {
+    font-weight: bold;
+    margin-top: .5em;
+}
+dd { margin-top: .1em; }
+ </style>   
+    
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        
+        <script>
+        
+      
+       $(document).ready(function()
+      {
+        $.get("http://api.indeed.com/ads/apisearch?publisher=6040603385951738&q=java&l=austin%2C+tx&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2", function(d){
+        $('body').append('<h1> Recommended Web Development Books </h1>');
+        $('body').append('<dl />');
+ 
+        $(d).find('result').each(function(){
+ 
+            var $book = $(this); 
+           // var title = $book.attr("id");
+           var description = $book.find('jobtitle').text();
+           var description = $book.find('company').text();
+           var description = $book.find('jobtitle').text();
+           // var imageurl = $book.attr('logo');
+ 
+            var html = '<dt> <img class="bookImage" alt="" src="' + imageurl + '" /> </dt>';
+            html += '<dd> <span class="loadingPic" alt="Loading" />';
+            html += '<p class="title">' + title + '</p>';
+            html += '<p> ' + description + '</p>' ;
+            html += '</dd>';
+ 
+            $('dl').append($(html));
+             
+            $('.loadingPic').fadeOut(1400);
+        });
+    });
+});
+  </script>
+    
+    
+    
+    
+  </head>
+
+  <body>
+
+    <dl>
+</dl>
+ 
+    
+    
+    
+    
+  </body>
+</html>

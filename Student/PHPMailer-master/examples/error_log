@@ -1,0 +1,2 @@
+[25-Jan-2016 10:07:59 America/New_York] PHP Parse error:  syntax error, unexpected 'var' (T_VAR), expecting ';' in /home/shubham1/public_html/DOMS/Student/PHPMailer-master/examples/gmail.php on line 8
+[25-Jan-2016 15:08:50 Etc/UTC] PHP Fatal error:  Cannot redeclare PHPMailerAutoload() (previously declared in /home/shubham1/public_html/DOMS/Student/PHPMailer-master/PHPMailerAutoload.php:24) in /home/shubham1/public_html/DOMS/Student/PHPMailer-master/PHPMailerAutoload.php on line 31

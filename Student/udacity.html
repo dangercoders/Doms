@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     
+   
+<script type="text/javascript">
+$(document).ready(function() {
+
+   
+     $.getJSON("https://www.udacity.com/public-api/v0/courses", function(data) {
+  
+        var html = "";
+
+         $.each(data.courses, function(count) {
+
+          html += "<div class = 'cat'>";
+
+          // Only change code below this line.
+          
+           html += "<a href = '" + data.courses[count].homepage + "'>"+data.courses[count].title+"</a>";
+          
+          // Only change code above this line.
+
+          html += "</div>";
+
+        });
+
+        $(".message").html(html);
+
+      });
+    });
+ 
+
+</script>
+
+</head>
+<body>
+
+
+<div class="container-fluid">
+  <div class = "row text-center">
+    <h2>Courses</h2>
+  </div>
+  <div class = "row text-center">
+    <div class = "message">
+      The message will go here
+    </div>
+  </div>
+  <div class = "row text-center">
+    <div class = "col-xs-12">
+      <button id = "getMessage" class = "btn btn-primary">
+        Get Message
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

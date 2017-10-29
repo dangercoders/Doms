@@ -1,0 +1,18 @@
+[21-Jan-2016 02:32:24 America/New_York] PHP Warning:  mysql_query(): Access denied for user 'shubham1'@'localhost' (using password: NO) in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:32:24 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:32:24 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 8
+[21-Jan-2016 02:32:33 America/New_York] PHP Warning:  mysql_query(): Access denied for user 'shubham1'@'localhost' (using password: NO) in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:32:33 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:32:33 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 8
+[21-Jan-2016 02:33:30 America/New_York] PHP Warning:  mysql_query(): Access denied for user 'shubham1'@'localhost' (using password: NO) in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:33:30 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:33:30 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 8
+[21-Jan-2016 02:33:38 America/New_York] PHP Warning:  mysql_query(): Access denied for user 'shubham1'@'localhost' (using password: NO) in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:33:38 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:33:38 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 8
+[21-Jan-2016 02:33:45 America/New_York] PHP Warning:  mysql_query(): Access denied for user 'shubham1'@'localhost' (using password: NO) in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:33:45 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 6
+[21-Jan-2016 02:33:45 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 8
+[21-Jan-2016 02:34:44 America/New_York] PHP Warning:  mysql_query(): Access denied for user 'shubham1'@'localhost' (using password: NO) in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 7
+[21-Jan-2016 02:34:44 America/New_York] PHP Warning:  mysql_query(): A link to the server could not be established in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 7
+[21-Jan-2016 02:34:44 America/New_York] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/shubham1/public_html/DOMS/Student/sections/ajax_city.php on line 9
