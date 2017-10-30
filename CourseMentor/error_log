@@ -1,3 +1,0 @@
-[06-May-2017 08:50:08 America/New_York] PHP Parse error:  syntax error, unexpected end of file in /home/shubham1/public_html/DOMS/CourseMentor/google_login.php on line 118
-[06-May-2017 08:56:26 America/New_York] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/shubham1/public_html/DOMS/CourseMentor/google_login.php on line 100
-[06-May-2017 17:09:53 America/New_York] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/shubham1/public_html/DOMS/CourseMentor/google_login.php on line 101
