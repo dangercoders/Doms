@@ -1,7 +1,8 @@
 <?
-$username="shubham1_doms";
-$password="PSR3fbN0bs58";
-$database="shubham1_doms";
+$username="root";
+$password="";
+$database="";
 $servername = "localhost";
 $dsn= "mysql:host=$servername;dbname=$database";
+
 ?>
